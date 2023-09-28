@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:tepr/utils/app_data.dart';
+import 'package:tepr/utils/date_time_helper.dart';
 import '../style/colors.dart';
 
 class HomePage extends StatelessWidget {
@@ -6,11 +8,12 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final dtHelper = DateTimeHelper();
     return Scaffold(
       appBar: AppBar(
         backgroundColor: primaryColor,
         title: const Text(
-          'PolicyTrackr',
+          '###',
           style: TextStyle(color: textWhiteColor, letterSpacing: 1.0),
         ),
         centerTitle: true,
@@ -26,10 +29,30 @@ class HomePage extends StatelessWidget {
         ],
       ),
       /* drawer: const LeftMenu(), */
-      body: const Center(
-          child: Center(
-        child: Text('Hello world!'),
-      )),
+      body: Center(
+          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+        const Text('🚀 A new app is being born here 🚀'),
+        const SizedBox(
+          height: 13.0,
+        ),
+        Text(dtHelper.deTimestamp()),
+        const SizedBox(
+          height: 13.0,
+        ),
+        /*  Text(dtHelper.localDateTimeNow()),
+        const SizedBox(
+          height: 13.0,
+        ), */
+        ElevatedButton(
+          style: ElevatedButton.styleFrom(),
+          onPressed: () {},
+          child: const Text('TAP ME'),
+        ),
+        const SizedBox(
+          height: 13.0,
+        ),
+        const AppData(),
+      ])),
       /* bottomNavigationBar: const BottomNavBar(), */
     );
   }
