@@ -1,6 +1,6 @@
 # tepr
 
-A new Flutter project.
+A new multiplatform test project / software solution based on Flutter.
 
 ## Getting Started
 
