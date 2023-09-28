@@ -35,14 +35,10 @@ class HomePage extends StatelessWidget {
         const SizedBox(
           height: 13.0,
         ),
-        Text(dtHelper.deTimestamp()),
+        Text(dtHelper.localDateTimeNow()),
         const SizedBox(
           height: 13.0,
         ),
-        /*  Text(dtHelper.localDateTimeNow()),
-        const SizedBox(
-          height: 13.0,
-        ), */
         ElevatedButton(
           style: ElevatedButton.styleFrom(),
           onPressed: () {},
