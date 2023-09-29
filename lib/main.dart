@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:tepr/pages/home.dart';
-import 'package:tepr/style/colors.dart';
+import '../../pages/home.dart';
+import '../../style/colors.dart';
 
 void main() {
   runApp(const MyApp());
