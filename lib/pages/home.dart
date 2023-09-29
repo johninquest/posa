@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:tepr/utils/app_data.dart';
-import 'package:tepr/utils/date_time_helper.dart';
+import '../../shared/left_menu.dart';
+import '../../utils/app_data.dart';
+import '../../utils/date_time_helper.dart';
 import '../style/colors.dart';
+import 'dart:developer';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -11,6 +13,7 @@ class HomePage extends StatelessWidget {
     final dtHelper = DateTimeHelper();
     return Scaffold(
       appBar: AppBar(
+        iconTheme: const IconThemeData(color: textWhiteColor),
         backgroundColor: primaryColor,
         title: const Text(
           '###',
@@ -50,6 +53,12 @@ class HomePage extends StatelessWidget {
         const AppData(),
       ])),
       /* bottomNavigationBar: const BottomNavBar(), */
+      drawer: const LeftMenu(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => log('Tapped + button'),
+        tooltip: 'Increment',
+        child: const Icon(Icons.add),
+      ),
     );
   }
 }
