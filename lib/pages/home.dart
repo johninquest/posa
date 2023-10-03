@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../shared/left_menu.dart';
-import '../../utils/app_data.dart';
+import '../../utils/version_info.dart';
 import '../../utils/date_time_helper.dart';
 import '../style/colors.dart';
 import 'dart:developer';
@@ -47,16 +47,16 @@ class HomePage extends StatelessWidget {
           onPressed: () {},
           child: const Text('TAP ME'),
         ),
-        const SizedBox(
+        /* const SizedBox(
           height: 13.0,
         ),
-        const AppData(),
+        const VersionInfo(), */
       ])),
       /* bottomNavigationBar: const BottomNavBar(), */
       drawer: const LeftMenu(),
       floatingActionButton: FloatingActionButton(
-        onPressed: () => log('Tapped + button'),
-        tooltip: 'Increment',
+        onPressed: () => log('Tapped add button'),
+        tooltip: 'Add',
         child: const Icon(Icons.add),
       ),
     );

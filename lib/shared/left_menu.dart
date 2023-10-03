@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:tepr/pages/info.dart';
+import 'package:tepr/utils/version_info.dart';
 import '../style/colors.dart';
 import 'dart:developer';
 import '../utils/router.dart';
@@ -14,6 +16,7 @@ class _LeftMenuState extends State<LeftMenu> {
   String? _currentUserName;
   @override
   Widget build(BuildContext context) {
+    final _router = PageRouter();
     return SizedBox(
       width: MediaQuery.of(context).size.width * 0.5,
       child: Drawer(
@@ -61,13 +64,23 @@ class _LeftMenuState extends State<LeftMenu> {
             ), */
             ListTile(
               leading: const Icon(
-                Icons.info_outline,
+                Icons.build_outlined,
                 color: primaryColor,
               ),
               title: const Text(
                 'Item 3',
               ),
               onTap: () => log('Tapped 3'),
+            ),
+            ListTile(
+              leading: const Icon(
+                Icons.info_outline,
+                color: primaryColor,
+              ),
+              title: const Text(
+                'Info',
+              ),
+              onTap: () => _router.navigateToPage(const AppInfoPage(), context),
             ),
           ],
         ),

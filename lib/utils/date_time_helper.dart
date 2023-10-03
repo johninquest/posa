@@ -13,4 +13,10 @@ class DateTimeHelper {
     DateTime localNow = now.toLocal();
     return '$localNow';
   }
+
+  utcTimestamp() {
+    DateTime now = DateTime.now();
+    DateTime utcNow = now.toUtc();
+    return '$utcNow';
+  }
 }

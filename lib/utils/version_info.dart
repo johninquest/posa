@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 
-class AppData extends StatefulWidget {
-  const AppData({super.key});
+class VersionInfo extends StatefulWidget {
+  const VersionInfo({super.key});
 
   @override
-  State<AppData> createState() => _AppDataState();
+  State<VersionInfo> createState() => _VersionInfoState();
 }
 
-class _AppDataState extends State<AppData> {
+class _VersionInfoState extends State<VersionInfo> {
   final Future<PackageInfo> _packageInfo = PackageInfo.fromPlatform();
 
   @override
