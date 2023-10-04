@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:tepr/pages/info.dart';
-import 'package:tepr/utils/version_info.dart';
 import '../style/colors.dart';
 import 'dart:developer';
 import '../utils/router.dart';
@@ -13,10 +12,10 @@ class LeftMenu extends StatefulWidget {
 }
 
 class _LeftMenuState extends State<LeftMenu> {
-  String? _currentUserName;
+  String? currentUserName;
   @override
   Widget build(BuildContext context) {
-    final _router = PageRouter();
+    final router = PageRouter();
     return SizedBox(
       width: MediaQuery.of(context).size.width * 0.5,
       child: Drawer(
@@ -29,12 +28,12 @@ class _LeftMenuState extends State<LeftMenu> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     const Icon(
-                      Icons.person,
+                      Icons.settings,
                       color: Colors.white,
                       size: 50.0,
                     ),
                     Text(
-                      _currentUserName ?? '',
+                      currentUserName ?? '',
                       style: const TextStyle(
                           fontWeight: FontWeight.bold, fontSize: 20.0),
                     )
@@ -42,11 +41,11 @@ class _LeftMenuState extends State<LeftMenu> {
                 )),
             ListTile(
               leading: const Icon(
-                Icons.school_outlined,
+                Icons.person,
                 color: primaryColor,
               ),
               title: const Text(
-                'Item 1',
+                'Person',
               ),
               /* onTap: () => PageRouter().navigateToPage(const SchoolInfoPage(), context) */
               onTap: () => log('Tapped 1'),
@@ -80,7 +79,7 @@ class _LeftMenuState extends State<LeftMenu> {
               title: const Text(
                 'Info',
               ),
-              onTap: () => _router.navigateToPage(const AppInfoPage(), context),
+              onTap: () => router.navigateToPage(const AppInfoPage(), context),
             ),
           ],
         ),

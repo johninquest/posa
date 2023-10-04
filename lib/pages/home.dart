@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../../shared/left_menu.dart';
-import '../../utils/version_info.dart';
 import '../../utils/date_time_helper.dart';
 import '../style/colors.dart';
 import 'dart:developer';
@@ -16,7 +15,7 @@ class HomePage extends StatelessWidget {
         iconTheme: const IconThemeData(color: textWhiteColor),
         backgroundColor: primaryColor,
         title: const Text(
-          '###',
+          'tepr',
           style: TextStyle(color: textWhiteColor, letterSpacing: 1.0),
         ),
         centerTitle: true,
