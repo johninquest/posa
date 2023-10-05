@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import '../../pages/info.dart';
+import 'package:go_router/go_router.dart';
+// import '../../pages/info.dart';
 import '../style/colors.dart';
-import '../utils/router.dart';
+// import '../utils/router.dart';
 import 'dart:developer';
 
 class LeftMenu extends StatefulWidget {
@@ -15,7 +16,6 @@ class _LeftMenuState extends State<LeftMenu> {
   String? currentUserName;
   @override
   Widget build(BuildContext context) {
-    final router = PageRouter();
     return SizedBox(
       width: MediaQuery.of(context).size.width * 0.5,
       child: Drawer(
@@ -48,7 +48,7 @@ class _LeftMenuState extends State<LeftMenu> {
                 'Person',
               ),
               /* onTap: () => PageRouter().navigateToPage(const SchoolInfoPage(), context) */
-              onTap: () => log('Tapped 1'),
+              onTap: () => context.push('/user'),
             ),
             ListTile(
               leading: const Icon(
@@ -79,7 +79,7 @@ class _LeftMenuState extends State<LeftMenu> {
               title: const Text(
                 'Info',
               ),
-              onTap: () => router.navigateToPage(const AppInfoPage(), context),
+              onTap: () => context.push('/info'),
             ),
           ],
         ),

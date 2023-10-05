@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import '../../pages/home.dart';
+import 'package:go_router/go_router.dart';
+// import '../../pages/home.dart';
 import '../../style/colors.dart';
-import '../../utils/router.dart';
+// import '../../utils/router.dart';
 import 'dart:developer';
 
 class AuthPage extends StatelessWidget {
@@ -40,8 +41,7 @@ class AuthPage extends StatelessWidget {
               height: 13.0,
             ),
             ElevatedButton(
-              onPressed: () =>
-                  PageRouter().navigateToPage(const HomePage(), context),
+              onPressed: () => context.go('/home'),
               child: const Icon(Icons.home),
             )
           ],

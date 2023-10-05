@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:tepr/pages/auth.dart';
 import 'package:tepr/utils/router.dart';
 import '../../shared/left_menu.dart';
@@ -31,8 +32,7 @@ class HomePage extends StatelessWidget {
             tooltip: 'Log out',
           ) */
           IconButton(
-            onPressed: () =>
-                PageRouter().navigateToPage(const AuthPage(), context),
+            onPressed: () => context.push('/auth'),
             icon: const Icon(Icons.logout_outlined),
             tooltip: 'Log out',
           )
