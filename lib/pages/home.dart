@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:tepr/pages/auth.dart';
+import 'package:tepr/utils/router.dart';
 import '../../shared/left_menu.dart';
 import '../../utils/date_time_helper.dart';
 import '../style/colors.dart';
@@ -19,7 +21,7 @@ class HomePage extends StatelessWidget {
           style: TextStyle(color: textWhiteColor, letterSpacing: 1.0),
         ),
         centerTitle: true,
-        actions: const [
+        actions: [
           /* IconButton(
             onPressed: () => showDialog(
                 context: context,
@@ -28,15 +30,21 @@ class HomePage extends StatelessWidget {
             icon: const Icon(Icons.logout_outlined),
             tooltip: 'Log out',
           ) */
+          IconButton(
+            onPressed: () =>
+                PageRouter().navigateToPage(const AuthPage(), context),
+            icon: const Icon(Icons.logout_outlined),
+            tooltip: 'Log out',
+          )
         ],
       ),
       /* drawer: const LeftMenu(), */
       body: Center(
           child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-        const Text('🚀 A new app is being born here 🚀'),
+        /* const Text('🚀 A new app is being born here 🚀'),
         const SizedBox(
           height: 13.0,
-        ),
+        ), */
         Text(dtHelper.localDateTimeNow()),
         const SizedBox(
           height: 13.0,
