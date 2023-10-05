@@ -1,6 +1,6 @@
 <h3 align="center">tepr<h3>
 
-<p align="center">A new multiplatform test project / software solution based on Flutter.</p>
+<p align="center">A new multiplatform test project based on Flutter.</p>
 
 ## Getting Started
 
