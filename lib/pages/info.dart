@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../utils/version_info.dart';
-import '../style/colors.dart';
+// import '../style/colors.dart';
 
 class AppInfoPage extends StatelessWidget {
   const AppInfoPage({Key? key}) : super(key: key);

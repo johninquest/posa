@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:tepr/pages/auth.dart';
-import 'package:tepr/utils/router.dart';
 import '../../shared/left_menu.dart';
 import '../../utils/date_time_helper.dart';
 import '../style/colors.dart';
