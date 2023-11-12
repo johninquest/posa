@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:tepr/pages/home.dart';
-import 'package:tepr/pages/info.dart';
-import 'package:tepr/pages/user.dart';
+import '../../pages/home.dart';
+import '../../pages/info.dart';
+import '../../pages/user/user.dart';
 import '../../pages/auth.dart';
 /* import '../../pages/home.dart'; */
 import '../../style/colors.dart';
@@ -19,16 +19,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      routerConfig: _router,
-      debugShowCheckedModeBanner: false,
-      /* title: 'Flutter Demo', */
-      theme: ThemeData(
+        routerConfig: _router,
+        debugShowCheckedModeBanner: false,
+        /* title: 'Flutter Demo', */
+        theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: primaryColor),
           useMaterial3: true,
           /*  fontFamily: GoogleFonts.quicksand().fontFamily, */
           textTheme: GoogleFonts.montserratTextTheme(),
-      // home: const AuthPage(),
-    );
+          // home: const AuthPage(),
+        ));
   }
 
   final GoRouter _router = GoRouter(initialLocation: '/auth', routes: [

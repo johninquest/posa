@@ -45,7 +45,7 @@ class _LeftMenuState extends State<LeftMenu> {
                 color: primaryColor,
               ),
               title: const Text(
-                'Person',
+                'User',
               ),
               /* onTap: () => PageRouter().navigateToPage(const SchoolInfoPage(), context) */
               onTap: () => context.push('/user'),
