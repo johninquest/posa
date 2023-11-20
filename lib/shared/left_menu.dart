@@ -52,10 +52,10 @@ class _LeftMenuState extends State<LeftMenu> {
             ),
             ListTile(
               leading: const Icon(
-                Icons.manage_accounts_outlined,
+                Icons.manage_accounts,
                 color: primaryColor,
               ),
-              title: const Text('Item 2'),
+              title: const Text('Assets'),
               onTap: () => log('Tapped 2'),
             ),
             /*  const SizedBox(
@@ -63,17 +63,27 @@ class _LeftMenuState extends State<LeftMenu> {
             ), */
             ListTile(
               leading: const Icon(
-                Icons.build_outlined,
+                Icons.build,
                 color: primaryColor,
               ),
               title: const Text(
-                'Item 3',
+                'Liabilities',
               ),
               onTap: () => log('Tapped 3'),
             ),
             ListTile(
               leading: const Icon(
-                Icons.info_outline,
+                Icons.account_balance_wallet,
+                color: primaryColor,
+              ),
+              title: const Text(
+                'Net worth',
+              ),
+              onTap: () => context.push('/networth'),
+            ),
+            ListTile(
+              leading: const Icon(
+                Icons.info,
                 color: primaryColor,
               ),
               title: const Text(

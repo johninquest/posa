@@ -11,7 +11,10 @@ class UserPage extends StatelessWidget {
         centerTitle: true,
       ),
       body: const Center(
-        child: Text('Just do it!'),
+        child: Text(
+          '🚀 Now Or Never 🚀',
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
       ),
     );
   }
