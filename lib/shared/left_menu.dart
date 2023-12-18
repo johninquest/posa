@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-// import '../../pages/info.dart';
 import '../style/colors.dart';
-// import '../utils/router.dart';
-import 'dart:developer';
+// import 'dart:developer';
 
 class LeftMenu extends StatefulWidget {
-  const LeftMenu({Key? key}) : super(key: key);
+  const LeftMenu({super.key});
 
   @override
   State<LeftMenu> createState() => _LeftMenuState();
@@ -50,7 +48,7 @@ class _LeftMenuState extends State<LeftMenu> {
               /* onTap: () => PageRouter().navigateToPage(const SchoolInfoPage(), context) */
               onTap: () => context.push('/user'),
             ),
-            ListTile(
+            /* ListTile(
               leading: const Icon(
                 Icons.manage_accounts,
                 color: primaryColor,
@@ -58,9 +56,6 @@ class _LeftMenuState extends State<LeftMenu> {
               title: const Text('Assets'),
               onTap: () => log('Tapped 2'),
             ),
-            /*  const SizedBox(
-              height: 25.0,
-            ), */
             ListTile(
               leading: const Icon(
                 Icons.build,
@@ -80,7 +75,7 @@ class _LeftMenuState extends State<LeftMenu> {
                 'Net worth',
               ),
               onTap: () => context.push('/networth'),
-            ),
+            ), */
             ListTile(
               leading: const Icon(
                 Icons.info,
@@ -90,6 +85,16 @@ class _LeftMenuState extends State<LeftMenu> {
                 'Info',
               ),
               onTap: () => context.push('/info'),
+            ),
+            ListTile(
+              leading: const Icon(
+                Icons.save,
+                color: primaryColor,
+              ),
+              title: const Text(
+                'Storage',
+              ),
+              onTap: () => context.push('/storage'),
             ),
           ],
         ),

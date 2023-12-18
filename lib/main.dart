@@ -5,6 +5,7 @@ import '../../pages/home.dart';
 import '../../pages/info.dart';
 import '../../pages/user/user.dart';
 import '../../pages/networth/overview.dart';
+import '../../pages/storage.dart';
 import '../../pages/auth.dart';
 /* import '../../pages/home.dart'; */
 import '../../style/colors.dart';
@@ -52,6 +53,10 @@ class MyApp extends StatelessWidget {
     GoRoute(
       path: '/networth',
       builder: (context, state) => const NetworthOverviewPage(),
+    ),
+    GoRoute(
+      path: '/storage',
+      builder: (context, state) => const StorageSettingPage(),
     ),
   ]);
 }
