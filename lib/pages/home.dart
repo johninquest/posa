@@ -43,7 +43,18 @@ class HomePage extends StatelessWidget {
         const SizedBox(
           height: 13.0,
         ), */
-        Text(dtHelper.localDateTimeNow()),
+        // Text(dtHelper.toDeDateTimeStr(DateTime.now())[0]),
+        Column(
+          children: [
+            Text(
+              dtHelper.toDeDateTimeStr(DateTime.now())['date'],
+              style: const TextStyle(
+                  fontWeight: FontWeight.bold, letterSpacing: 1.0),
+            ),
+            Text(dtHelper.toDeDateTimeStr(DateTime.now())['time'],
+                style: const TextStyle(fontWeight: FontWeight.bold))
+          ],
+        ),
         const SizedBox(
           height: 13.0,
         ),

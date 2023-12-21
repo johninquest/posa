@@ -1,3 +1,5 @@
+import 'package:intl/intl.dart';
+
 class DateTimeHelper {
   deTimestamp() {
     DateTime now = DateTime.now();
@@ -18,5 +20,19 @@ class DateTimeHelper {
     DateTime now = DateTime.now();
     DateTime utcNow = now.toUtc();
     return '$utcNow';
+  }
+
+  toDeDateTimeStr(DateTime? dt) {
+    if (dt != null) {
+      // DateFormat deDateTimeFormat = DateFormat('dd.MM.yyyy HH:mm:ss');
+      DateFormat deDateFormat = DateFormat('dd.MM.yyyy');
+      DateFormat deTimeFormat = DateFormat('HH:mm:ss');
+      String dateToStr = deDateFormat.format(dt);
+      String timeToStr = deTimeFormat.format(dt);
+      // Map dtMap = {date: ''};
+      return {'date': dateToStr, 'time': timeToStr};
+    } else {
+      return {'date': '', 'time': ''};
+    }
   }
 }

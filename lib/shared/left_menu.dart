@@ -15,7 +15,7 @@ class _LeftMenuState extends State<LeftMenu> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: MediaQuery.of(context).size.width * 0.5,
+      width: MediaQuery.of(context).size.width * 0.45,
       child: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
@@ -39,7 +39,7 @@ class _LeftMenuState extends State<LeftMenu> {
                 )),
             ListTile(
               leading: const Icon(
-                Icons.person,
+                Icons.person_outline,
                 color: primaryColor,
               ),
               title: const Text(
@@ -78,7 +78,7 @@ class _LeftMenuState extends State<LeftMenu> {
             ), */
             ListTile(
               leading: const Icon(
-                Icons.info,
+                Icons.info_outline,
                 color: primaryColor,
               ),
               title: const Text(
@@ -88,7 +88,7 @@ class _LeftMenuState extends State<LeftMenu> {
             ),
             ListTile(
               leading: const Icon(
-                Icons.save,
+                Icons.save_outlined,
                 color: primaryColor,
               ),
               title: const Text(
