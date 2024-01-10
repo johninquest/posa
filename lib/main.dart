@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../pages/home.dart';
 import '../../pages/info.dart';
 import '../../pages/user/user.dart';
+import '../../pages/user/user_create.dart';
 import '../../pages/networth/overview.dart';
 import '../../pages/storage.dart';
 import '../../pages/auth.dart';
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: primaryColor),
           useMaterial3: true,
           /*  fontFamily: GoogleFonts.quicksand().fontFamily, */
-          textTheme: GoogleFonts.robotoMonoTextTheme(),
+          textTheme: GoogleFonts.latoTextTheme(),
           // home: const AuthPage(),
         ));
   }
@@ -49,6 +50,10 @@ class MyApp extends StatelessWidget {
     GoRoute(
       path: '/user',
       builder: (context, state) => const UserPage(),
+    ),
+    GoRoute(
+      path: '/user-create',
+      builder: (context, state) => const UserCreatePage(),
     ),
     GoRoute(
       path: '/networth',
