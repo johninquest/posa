@@ -5,12 +5,33 @@ import '../../utils/date_time_helper.dart';
 import '../style/colors.dart';
 import 'dart:developer';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
   @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  int currentIndex = 0;
+  static const List _body = [
+    Icon(
+      Icons.home,
+      size: 55.0,
+    ),
+    Icon(
+      Icons.list,
+      size: 55.0,
+    ),
+    Icon(
+      Icons.person,
+      size: 55.0,
+    )
+  ];
+
+  @override
   Widget build(BuildContext context) {
-    final dtHelper = DateTimeHelper();
+    // final dtHelper = DateTimeHelper();
     return Scaffold(
       appBar: AppBar(
         iconTheme: const IconThemeData(color: textWhiteColor),
@@ -38,21 +59,18 @@ class HomePage extends StatelessWidget {
       ),
       /* drawer: const LeftMenu(), */
       body: Center(
-          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-        /* const Text('🚀 A new app is being born here 🚀'),
-        const SizedBox(
-          height: 13.0,
-        ), */
-        // Text(dtHelper.toDeDateTimeStr(DateTime.now())[0]),
+        child: _body.elementAt(currentIndex),
+        /* child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
         Column(
           children: [
             Text(
               dtHelper.toDeDateTimeStr(DateTime.now())['date'],
               style: const TextStyle(
-                  fontWeight: FontWeight.bold, letterSpacing: 1.0),
+                  fontWeight: FontWeight.bold, letterSpacing: 3.0),
             ),
             Text(dtHelper.toDeDateTimeStr(DateTime.now())['time'],
-                style: const TextStyle(fontWeight: FontWeight.bold))
+                style: const TextStyle(
+                    fontWeight: FontWeight.bold, letterSpacing: 3.0))
           ],
         ),
         const SizedBox(
@@ -62,18 +80,23 @@ class HomePage extends StatelessWidget {
           style: ElevatedButton.styleFrom(),
           onPressed: () {},
           child: const Text('TAP ME'),
-        ),
-        /* const SizedBox(
-          height: 13.0,
-        ),
-        const VersionInfo(), */
-      ])),
+        )
+      ]) */
+      ),
       /* bottomNavigationBar: const BottomNavBar(), */
       drawer: const LeftMenu(),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () => log('Tapped add button'),
-        tooltip: 'Add',
-        child: const Icon(Icons.add),
+      bottomNavigationBar: NavigationBar(
+        destinations: const [
+          NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
+          NavigationDestination(icon: Icon(Icons.list), label: 'List'),
+          NavigationDestination(icon: Icon(Icons.person), label: 'User')
+        ],
+        selectedIndex: currentIndex,
+        onDestinationSelected: (int index) {
+          setState(() {
+            currentIndex = index;
+          });
+        },
       ),
     );
   }

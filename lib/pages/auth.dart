@@ -27,7 +27,10 @@ class AuthPage extends StatelessWidget {
             Container(
                 margin: const EdgeInsets.only(bottom: 13.0),
                 child: const Text('🚀 DO IT NOW 🚀',
-                    style: TextStyle(fontWeight: FontWeight.bold))),
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        wordSpacing: 5.0,
+                        letterSpacing: 1.0))),
             const SizedBox(
               height: 13.0,
             ),
