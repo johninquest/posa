@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../../shared/left_menu.dart';
-import '../../utils/date_time_helper.dart';
+// import '../../utils/date_time_helper.dart';
 import '../style/colors.dart';
-import 'dart:developer';
+// import 'dart:developer';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -14,19 +14,35 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int currentIndex = 0;
-  static const List _body = [
-    Icon(
-      Icons.home,
-      size: 55.0,
+  static final List _body = [
+    Scaffold(
+      appBar: AppBar(
+        title: const Text('Home'),
+        centerTitle: true,
+      ),
+      body: const Center(
+        child: Icon(
+          Icons.home,
+          size: 55.0,
+        ),
+      ),
     ),
-    Icon(
+    const Icon(
       Icons.list,
       size: 55.0,
     ),
-    Icon(
-      Icons.person,
-      size: 55.0,
-    )
+    Scaffold(
+      appBar: AppBar(
+        title: const Text('User'),
+        centerTitle: true,
+      ),
+      body: const Center(
+        child: Icon(
+          Icons.person,
+          size: 55.0,
+        ),
+      ),
+    ),
   ];
 
   @override
@@ -37,7 +53,7 @@ class _HomePageState extends State<HomePage> {
         iconTheme: const IconThemeData(color: textWhiteColor),
         backgroundColor: primaryColor,
         title: const Text(
-          'repr',
+          '',
           style: TextStyle(color: textWhiteColor, letterSpacing: 1.0),
         ),
         centerTitle: true,
