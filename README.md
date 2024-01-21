@@ -1,10 +1,17 @@
-<h3 align="center">repr<h3>
+<h3 align="center">PosApp<h3>
 
-<p align="center">A multiplatform reference project based on Flutter.</p>
+<p align="center">A simple mobile-first point-of-sale app built with Flutter</p>
 
-## Getting Started
+## Feature roadmap
 
-This project is a starting point for a Flutter application.
+- User-friendly interface
+- Offline capability
+- Inventory management ?
+- Payment processing ?
+- Sales tracking
+- Receipts & invoices
+
+<!-- This project is a starting point for a Flutter application.
 
 A few resources to get you started if this is your first Flutter project:
 
@@ -14,6 +21,6 @@ A few resources to get you started if this is your first Flutter project:
 
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+samples, guidance on mobile development, and a full API reference. -->
 
 ## Other notes
