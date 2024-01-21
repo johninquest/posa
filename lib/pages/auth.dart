@@ -3,7 +3,7 @@ import 'package:go_router/go_router.dart';
 // import '../../pages/home.dart';
 import '../../style/colors.dart';
 // import '../../utils/router.dart';
-import 'dart:developer';
+// import 'dart:developer';
 
 class AuthPage extends StatelessWidget {
   const AuthPage({super.key});
@@ -13,8 +13,8 @@ class AuthPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'pos app',
-          style: TextStyle(color: primaryColor),
+          'POS App',
+          style: TextStyle(color: primaryColor, letterSpacing: 1.0),
         ),
         centerTitle: true,
         automaticallyImplyLeading: false,
@@ -26,7 +26,7 @@ class AuthPage extends StatelessWidget {
           children: [
             Container(
                 margin: const EdgeInsets.only(bottom: 13.0),
-                child: const Text('🚀 DO IT NOW 🚀',
+                child: const Text('A simple POS app',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         wordSpacing: 5.0,
@@ -34,7 +34,7 @@ class AuthPage extends StatelessWidget {
             const SizedBox(
               height: 13.0,
             ),
-            ElevatedButton(
+            /*  ElevatedButton(
               onPressed: () => log('Tapped google button'),
               child: const Text(
                 'Continue with Google',
@@ -42,7 +42,7 @@ class AuthPage extends StatelessWidget {
             ),
             const SizedBox(
               height: 13.0,
-            ),
+            ), */
             ElevatedButton(
               onPressed: () => context.go('/home'),
               child: const Icon(Icons.home),
