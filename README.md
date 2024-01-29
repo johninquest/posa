@@ -1,4 +1,4 @@
-<h3 align="center">PosApp<h3>
+<h3 align="center">posa<h3>
 
 <p align="center">A simple mobile-first point-of-sale app built with Flutter</p>
 

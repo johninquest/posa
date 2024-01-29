@@ -39,6 +39,39 @@ class _LeftMenuState extends State<LeftMenu> {
                 )),
             ListTile(
               leading: const Icon(
+                Icons.inventory_outlined,
+                color: primaryColor,
+              ),
+              title: const Text(
+                'Inventory',
+              ),
+              /* onTap: () => PageRouter().navigateToPage(const SchoolInfoPage(), context) */
+              onTap: () => context.push('/inventory-list'),
+            ),
+            ListTile(
+              leading: const Icon(
+                Icons.receipt_long_outlined,
+                color: primaryColor,
+              ),
+              title: const Text(
+                'Invoices',
+              ),
+              /* onTap: () => PageRouter().navigateToPage(const SchoolInfoPage(), context) */
+              onTap: () => context.push('/inventory-list'),
+            ),
+            ListTile(
+              leading: const Icon(
+                Icons.point_of_sale_outlined,
+                color: primaryColor,
+              ),
+              title: const Text(
+                'Sales',
+              ),
+              /* onTap: () => PageRouter().navigateToPage(const SchoolInfoPage(), context) */
+              onTap: () => context.push('/sales-list'),
+            ),
+            ListTile(
+              leading: const Icon(
                 Icons.person_outline,
                 color: primaryColor,
               ),

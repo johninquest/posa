@@ -5,9 +5,10 @@ import '../../pages/home.dart';
 import '../../pages/info.dart';
 import '../../pages/user/user.dart';
 import '../../pages/user/user_create.dart';
-import '../../pages/networth/overview.dart';
 import '../../pages/storage.dart';
 import '../../pages/auth.dart';
+import '../../pages/inventory/inventory_list.dart';
+import '../../pages/sales/sales_list.dart';
 /* import '../../pages/home.dart'; */
 import '../../style/colors.dart';
 
@@ -56,8 +57,12 @@ class MyApp extends StatelessWidget {
       builder: (context, state) => const UserCreatePage(),
     ),
     GoRoute(
-      path: '/networth',
-      builder: (context, state) => const NetworthOverviewPage(),
+      path: '/inventory-list',
+      builder: (context, state) => const InventoryListPage(),
+    ),
+    GoRoute(
+      path: '/sales-list',
+      builder: (context, state) => const SalesListPage(),
     ),
     GoRoute(
       path: '/storage',
