@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../../shared/left_menu.dart';
-// import '../../utils/date_time_helper.dart';
 import '../style/colors.dart';
-// import 'dart:developer';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -15,7 +13,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int currentIndex = 0;
   static final List _body = [
-    Scaffold(
+    /*  Scaffold(
       appBar: AppBar(
         title: const Text('Home'),
         centerTitle: true,
@@ -26,7 +24,8 @@ class _HomePageState extends State<HomePage> {
           size: 55.0,
         ),
       ),
-    ),
+    ), */
+    const HomeButtons(),
     const Icon(
       Icons.list,
       size: 55.0,
@@ -104,6 +103,7 @@ class _HomePageState extends State<HomePage> {
       bottomNavigationBar: NavigationBar(
         destinations: const [
           NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
+          // NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
           NavigationDestination(icon: Icon(Icons.list), label: 'List'),
           NavigationDestination(icon: Icon(Icons.person), label: 'User')
         ],
@@ -114,6 +114,35 @@ class _HomePageState extends State<HomePage> {
           });
         },
       ),
+    );
+  }
+}
+
+class HomeButtons extends StatelessWidget {
+  const HomeButtons({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Container(
+          width: MediaQuery.of(context).size.width * 0.8,
+          height: 55.0,
+          margin: const EdgeInsets.only(bottom: 5.0, top: 5.0),
+          child: ElevatedButton(
+              onPressed: () => context.push('/inventory-list'),
+              child: const Text('Inventory')),
+        ),
+        Container(
+          width: MediaQuery.of(context).size.width * 0.8,
+          height: 55.0,
+          margin: const EdgeInsets.only(bottom: 5.0, top: 5.0),
+          child: ElevatedButton(
+              onPressed: () => context.push('/sales-list'),
+              child: const Text('Sales')),
+        ),
+      ],
     );
   }
 }
