@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '../../pages/home.dart';
-import '../../pages/info.dart';
-import '../../pages/user/user.dart';
-import '../../pages/user/user_create.dart';
-import '../../pages/storage.dart';
+import 'pages/home.dart';
+import 'pages/info.dart';
+import 'pages/user/user_details.dart';
+import 'pages/user/user_create.dart';
+/* import '../../pages/storage.dart'; */
 import '../../pages/auth.dart';
 import '../../pages/inventory/inventory_list.dart';
 import '../../pages/sales/sales_list.dart';
+import '../../pages/sales/sale_create.dart';
 /* import '../../pages/home.dart'; */
 import '../../style/colors.dart';
 
@@ -65,8 +66,8 @@ class MyApp extends StatelessWidget {
       builder: (context, state) => const SalesListPage(),
     ),
     GoRoute(
-      path: '/storage',
-      builder: (context, state) => const StorageSettingPage(),
+      path: '/sale-create',
+      builder: (context, state) => const SaleCreatePage(),
     ),
   ]);
 }
