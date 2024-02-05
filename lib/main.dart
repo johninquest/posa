@@ -8,6 +8,7 @@ import 'pages/user/user_create.dart';
 /* import '../../pages/storage.dart'; */
 import '../../pages/auth.dart';
 import '../../pages/inventory/inventory_list.dart';
+import 'pages/inventory/inventory_create.dart';
 import '../../pages/sales/sales_list.dart';
 import '../../pages/sales/sale_create.dart';
 /* import '../../pages/home.dart'; */
@@ -60,6 +61,10 @@ class MyApp extends StatelessWidget {
     GoRoute(
       path: '/inventory-list',
       builder: (context, state) => const InventoryListPage(),
+    ),
+    GoRoute(
+      path: '/inventory-create',
+      builder: (context, state) => const InventoryCreatePage(),
     ),
     GoRoute(
       path: '/sales-list',

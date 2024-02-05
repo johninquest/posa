@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class InventoryListPage extends StatelessWidget {
   const InventoryListPage({super.key});
@@ -9,6 +10,11 @@ class InventoryListPage extends StatelessWidget {
       appBar: AppBar(),
       body: const Center(
         child: Text('Inventory list'),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => context.push('/inventory-create'),
+        tooltip: 'New inventory',
+        child: const Icon(Icons.add),
       ),
     );
   }
