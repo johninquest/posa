@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'pages/customers/customer_list.dart';
+import 'pages/customers/customer_create.dart';
 import 'pages/home.dart';
 import 'pages/info.dart';
 import 'pages/user/user_details.dart';
@@ -26,7 +28,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
         routerConfig: _router,
-        debugShowCheckedModeBanner: false,
+        debugShowCheckedModeBanner: true,
         /* title: 'Flutter Demo', */
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: primaryColor),
@@ -45,6 +47,14 @@ class MyApp extends StatelessWidget {
     GoRoute(
       path: '/home',
       builder: (context, state) => const HomePage(),
+    ),
+    GoRoute(
+      path: '/customers-list',
+      builder: (context, state) => const CustomersListPage(),
+    ),
+    GoRoute(
+      path: '/customer-create',
+      builder: (context, state) => const CustomerCreatePage(),
     ),
     GoRoute(
       path: '/info',

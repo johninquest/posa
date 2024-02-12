@@ -131,6 +131,14 @@ class HomeButtons extends StatelessWidget {
           height: 55.0,
           margin: const EdgeInsets.only(bottom: 5.0, top: 5.0),
           child: ElevatedButton(
+              onPressed: () => context.push('/customers-list'),
+              child: const Text('Customers')),
+        ),
+        Container(
+          width: MediaQuery.of(context).size.width * 0.8,
+          height: 55.0,
+          margin: const EdgeInsets.only(bottom: 5.0, top: 5.0),
+          child: ElevatedButton(
               onPressed: () => context.push('/inventory-list'),
               child: const Text('Inventory')),
         ),

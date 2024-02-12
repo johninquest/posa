@@ -39,6 +39,17 @@ class _LeftMenuState extends State<LeftMenu> {
                 )),
             ListTile(
               leading: const Icon(
+                Icons.groups_2_outlined,
+                color: primaryColor,
+              ),
+              title: const Text(
+                'Customers',
+              ),
+              /* onTap: () => PageRouter().navigateToPage(const SchoolInfoPage(), context) */
+              onTap: () => context.push('/customers-list'),
+            ),
+            ListTile(
+              leading: const Icon(
                 Icons.inventory_outlined,
                 color: primaryColor,
               ),

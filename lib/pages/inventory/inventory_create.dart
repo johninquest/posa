@@ -28,6 +28,7 @@ class InventoryCreateForm extends StatefulWidget {
 class _InventoryCreateFormState extends State<InventoryCreateForm> {
   final inventoryItemFormKey = GlobalKey<FormState>();
   final TextEditingController itemName = TextEditingController();
+  final TextEditingController itemNumber = TextEditingController();
   final TextEditingController itemQty = TextEditingController();
   final TextEditingController itemUnitPrice = TextEditingController();
   @override
@@ -56,9 +57,23 @@ class _InventoryCreateFormState extends State<InventoryCreateForm> {
                 margin: const EdgeInsets.only(bottom: 5.0),
                 padding: const EdgeInsets.only(left: 25.0, right: 25.0),
                 child: TextFormField(
+                  controller: itemNumber,
+                  enabled: true,
+                  decoration: const InputDecoration(labelText: 'Item number'),
+                  keyboardType: TextInputType.text,
+                  textCapitalization: TextCapitalization.words,
+                  /* validator: (val) => val!.isEmpty
+                                    ? 'Item number'
+                                    : null, */
+                )),
+            Container(
+                width: MediaQuery.of(context).size.width * 0.89,
+                margin: const EdgeInsets.only(bottom: 5.0),
+                padding: const EdgeInsets.only(left: 25.0, right: 25.0),
+                child: TextFormField(
                   controller: itemQty,
                   enabled: true,
-                  decoration: const InputDecoration(labelText: 'Item quantity'),
+                  decoration: const InputDecoration(labelText: 'Quantity'),
                   keyboardType: TextInputType.text,
                   textCapitalization: TextCapitalization.words,
                   /* validator: (val) => val!.isEmpty
@@ -89,7 +104,7 @@ class _InventoryCreateFormState extends State<InventoryCreateForm> {
                     onPressed: () => Navigator.of(context).pop(),
                     style: ElevatedButton.styleFrom(),
                     child: const Text(
-                      'cancel',
+                      'CANCEL',
                       style: TextStyle(color: txtBlackColor),
                     ),
                   ),
@@ -98,7 +113,7 @@ class _InventoryCreateFormState extends State<InventoryCreateForm> {
                   margin: const EdgeInsets.all(10.0),
                   child: ElevatedButton(
                     onPressed: () {},
-                    child: const Text('save'),
+                    child: const Text('SAVE'),
                   ),
                 )
               ],
