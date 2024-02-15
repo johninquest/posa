@@ -35,6 +35,14 @@ class _SaleCreateFormState extends State<SaleCreateForm> {
   final TextEditingController itemUnitPrice = TextEditingController();
   final TextEditingController priceTotal = TextEditingController();
   final TextEditingController commentOnSale = TextEditingController();
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    priceTotal.text = '100';
+  }
+
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -77,7 +85,7 @@ class _SaleCreateFormState extends State<SaleCreateForm> {
                 child: TextFormField(
                   controller: itemQty,
                   enabled: true,
-                  decoration: const InputDecoration(labelText: 'Item quantity'),
+                  decoration: const InputDecoration(labelText: 'Quantity'),
                   keyboardType: TextInputType.text,
                   textCapitalization: TextCapitalization.words,
                   /* validator: (val) => val!.isEmpty
@@ -104,7 +112,8 @@ class _SaleCreateFormState extends State<SaleCreateForm> {
                 padding: const EdgeInsets.only(left: 25.0, right: 25.0),
                 child: TextFormField(
                   controller: priceTotal,
-                  enabled: true,
+                  enabled: false,
+                  readOnly: true,
                   decoration: const InputDecoration(labelText: 'Total'),
                   keyboardType: TextInputType.text,
                   textCapitalization: TextCapitalization.words,

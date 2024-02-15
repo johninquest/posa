@@ -39,6 +39,17 @@ class _LeftMenuState extends State<LeftMenu> {
                 )),
             ListTile(
               leading: const Icon(
+                Icons.storefront_outlined,
+                color: primaryColor,
+              ),
+              title: const Text(
+                'Business',
+              ),
+              /* onTap: () => PageRouter().navigateToPage(const SchoolInfoPage(), context) */
+              onTap: () => context.push('/business-info'),
+            ),
+            ListTile(
+              leading: const Icon(
                 Icons.groups_2_outlined,
                 color: primaryColor,
               ),
@@ -72,6 +83,17 @@ class _LeftMenuState extends State<LeftMenu> {
             ),
             ListTile(
               leading: const Icon(
+                Icons.groups_2_outlined,
+                color: primaryColor,
+              ),
+              title: const Text(
+                'Taxes',
+              ),
+              /* onTap: () => PageRouter().navigateToPage(const SchoolInfoPage(), context) */
+              onTap: () => context.push('/customers-list'),
+            ),
+            ListTile(
+              leading: const Icon(
                 Icons.person_outline,
                 color: primaryColor,
               ),
@@ -80,6 +102,9 @@ class _LeftMenuState extends State<LeftMenu> {
               ),
               /* onTap: () => PageRouter().navigateToPage(const SchoolInfoPage(), context) */
               onTap: () => context.push('/user'),
+            ),
+            const SizedBox(
+              height: 13.0,
             ),
             ListTile(
               leading: const Icon(

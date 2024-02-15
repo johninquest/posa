@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '/pages/business/business_info.dart';
+import '../../pages/taxes/tax_create.dart';
 import 'pages/customers/customer_list.dart';
 import 'pages/customers/customer_create.dart';
 import 'pages/home.dart';
 import 'pages/info.dart';
+import 'pages/taxes/taxes_list.dart';
 import 'pages/user/user_details.dart';
 import 'pages/user/user_create.dart';
 /* import '../../pages/storage.dart'; */
@@ -49,6 +52,10 @@ class MyApp extends StatelessWidget {
       builder: (context, state) => const HomePage(),
     ),
     GoRoute(
+      path: '/business-info',
+      builder: (context, state) => const BusinessInfoPage(),
+    ),
+    GoRoute(
       path: '/customers-list',
       builder: (context, state) => const CustomersListPage(),
     ),
@@ -83,6 +90,14 @@ class MyApp extends StatelessWidget {
     GoRoute(
       path: '/sale-create',
       builder: (context, state) => const SaleCreatePage(),
+    ),
+    GoRoute(
+      path: '/tax-create',
+      builder: (context, state) => const TaxeCreatePage(),
+    ),
+    GoRoute(
+      path: '/taxes-list',
+      builder: (context, state) => const TaxesPage(),
     ),
   ]);
 }
