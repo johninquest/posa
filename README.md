@@ -5,10 +5,11 @@
 ## Feature roadmap
 
 - User-friendly interface
-- Offline capability
+- Offline capability - SQLite (sqflite)
 - Inventory management\* - to-do
 - Payment processing\* -> i.e payment status
 - Sales tracking\*
+  - Discount & Surcharge -> When and where to apply them ?
 - Receipts & invoices
 
 <!-- This project is a starting point for a Flutter application.
