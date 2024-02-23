@@ -5,7 +5,7 @@
 ## Feature roadmap
 
 - User-friendly interface
-- Offline capability - SQLite (sqflite)
+- Offline capability => SQLite (sqflite)
 - Inventory management \*
 - Payment processing \* => i.e payment method & status
 - Sales tracking \*
