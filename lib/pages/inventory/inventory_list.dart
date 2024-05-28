@@ -7,7 +7,10 @@ class InventoryListPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: const Text('Inventory list'),
+        centerTitle: true,
+      ),
       body: const Center(
         child: Text('Inventory list'),
       ),

@@ -35,4 +35,26 @@ class DateTimeHelper {
       return {'date': '', 'time': ''};
     }
   }
+
+  toDeDateFormat(String dt) {
+    if (DateTime.tryParse(dt) != null && dt != '') {
+      DateTime parsedDatTime = DateTime.parse(dt);
+      DateFormat deDateFormat = DateFormat('dd.MM.yyyy');
+      String toDateFormat = deDateFormat.format(parsedDatTime);
+      return toDateFormat;
+    } else {
+      return '--.--.----';
+    }
+  }
+
+  fromDtToDeDateFormat(DateTime? dt) {
+    if (dt != null) {
+      // DateTime parsedDatTime = DateTime.parse(dt);
+      DateFormat deDateFormat = DateFormat('dd.MM.yyyy');
+      String toDateFormat = deDateFormat.format(dt);
+      return toDateFormat;
+    } else {
+      return '--.--.----';
+    }
+  }
 }
