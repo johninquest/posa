@@ -88,7 +88,7 @@ class _SaleCreateFormState extends State<SaleCreateForm> {
                 child: TextFormField(
                   controller: itemName,
                   enabled: true,
-                  decoration: const InputDecoration(labelText: 'Item name'),
+                  decoration: const InputDecoration(labelText: 'Item (1) name'),
                   keyboardType: TextInputType.text,
                   textCapitalization: TextCapitalization.words,
                   /* validator: (val) => val!.isEmpty
@@ -120,6 +120,14 @@ class _SaleCreateFormState extends State<SaleCreateForm> {
                   keyboardType: TextInputType.number,
                   textCapitalization: TextCapitalization.words,
                   validator: (val) => val!.isEmpty ? 'Unit price ?' : null,
+                )),
+            Container(
+                width: MediaQuery.of(context).size.width * 0.89,
+                margin: const EdgeInsets.only(bottom: 5.0, top: 5.0),
+                padding: const EdgeInsets.only(left: 25.0, right: 25.0),
+                child: ElevatedButton(
+                  onPressed: () {},
+                  child: const Text('Add new item'),
                 )),
             Container(
                 width: MediaQuery.of(context).size.width * 0.89,
